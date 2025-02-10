@@ -10,6 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './vitest.setup.mjs',
   },
+  base: '/shapeyourdreams'
   // resolve: {
   //   alias: {
   //     '@data': path.resolve('data'), // Adjust path to point to the `data` folder
