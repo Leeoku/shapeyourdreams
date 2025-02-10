@@ -11,8 +11,8 @@ const EssencesPage = () => {
   }
 
   const data = Object.entries(essences);
+  // console.log(data);
   const mappedData = data.map(([key, value]) => <ContentCard key={key} data={value} />);
-
   return <CardGrid cardData={mappedData} />;
 };
 
