@@ -6,6 +6,7 @@ import { gemsSchema } from '@/schemas/gemSchema';
 
 // const gemOrMemorySchema = z.union([gemsSchema])
 
+// @ts-ignore
 export const ContentCard = ({ data }) => {
   const { name, description, rarity, image } = data;
 
@@ -24,7 +25,7 @@ export const ContentCard = ({ data }) => {
           <Text>{rarity}</Text>
         </Group>
         {/* <Text>{description}</Text> */}
-        <StyledDescription description={description}/>
+        <StyledDescription description={description} />
       </Card>
     </Box>
   );

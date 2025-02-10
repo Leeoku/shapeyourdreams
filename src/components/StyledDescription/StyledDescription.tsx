@@ -1,29 +1,16 @@
 import { Text } from '@mantine/core';
 
 
-const regexes = [
-  {
-    pattern: /<color=([^>]+)>(.*?)<\/color>/g,
-    replacements: (match, color, text, key) => (
-      <span key={key} style={{ color }}>
-        {text}
-      </span>
-    ),
-  },
-  { pattern: '/<sprite=[125]>/g', replacement: '"EMOJI' },
-];
-
-
-const replaceColorTags = (text) => {
+const replaceColorTags = (text:any) => {
   const regex = /<color=([#a-zA-Z0-9]+)>(.*?)<\/color>/g;
 
   // Replace <color> tags with span elements
-  return text.replace(regex, (match, color, content) => {
+  return text.replace(regex, (match:any, color:any, content:any) => {
     return `<span style="color:${color}">${content}</span>`;
   });
 };
 
-const replaceSpriteWithImage = (text) => {
+const replaceSpriteWithImage = (text:any) => {
   // Define a mapping for sprite numbers to image URLs
   const spriteImages = {
     1: `/images/sprite1.png`, // Replace with actual image URLs
@@ -32,7 +19,8 @@ const replaceSpriteWithImage = (text) => {
   };
 
   // Regex to match <sprite={num}> and replace with corresponding <img> tag
-  return text.replace(/<sprite=(\d+)>/g, (match, num) => {
+  return text.replace(/<sprite=(\d+)>/g, (match:any, num:number) => {
+    // @ts-ignore
     const spriteImageUrl = spriteImages[num];
     if (spriteImageUrl) {
       // Return an img tag with the appropriate sprite image URL')
@@ -42,6 +30,7 @@ const replaceSpriteWithImage = (text) => {
   });
 };
 
+// @ts-ignore
 export const StyledDescription = ({ description }) => {
   const parsedDescription = replaceColorTags(description);
   const parsedSpriteDescription = replaceSpriteWithImage(parsedDescription);
