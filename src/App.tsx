@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <ColorSchemeScript forceColorScheme="dark" />
-      <MantineProvider theme={theme}>
+      <MantineProvider defaultColorScheme = 'dark'>
         <Router />
       </MantineProvider>
     </>
