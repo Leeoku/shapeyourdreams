@@ -1,10 +1,5 @@
-import { z } from 'zod';
 import { Box, Card, CardSection, Center, Group, Image, Text } from '@mantine/core';
 import { StyledDescription } from '@/components/StyledDescription/StyledDescription';
-import { gemsSchema } from '@/schemas/gemSchema';
-
-
-// const gemOrMemorySchema = z.union([gemsSchema])
 
 // @ts-ignore
 export const ContentCard = ({ data }) => {

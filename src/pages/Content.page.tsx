@@ -1,10 +1,14 @@
+import { z } from 'zod';
 import { CardGrid } from '@/components/CardGrid/CardGrid';
 import { ContentCard } from '@/components/ContentCard/ContentCard';
 import { TabType } from '@/components/TabsComponent/TabsComponent';
 import { gemsSchema } from '@/schemas/gemSchema';
+import { memoriesSchema } from '@/schemas/memorySchema';
 import EssencesData from '../../data/essences.json';
 import MemoriesData from '../../data/memories.json';
 
+
+const gemOrMemorySchema = z.union([gemsSchema, memoriesSchema])
 
 interface ContentPageProps {
   activeTab: TabType
@@ -19,7 +23,7 @@ const ContentPage = ({activeTab}: ContentPageProps) => {
   const jsonToLoad = dataMapping[activeTab]
 
   try {
-    gemsSchema.parse(jsonToLoad);
+    gemOrMemorySchema.parse(jsonToLoad);
   } catch (e) {
     console.error(e);
   }
