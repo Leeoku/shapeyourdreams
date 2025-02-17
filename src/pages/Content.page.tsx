@@ -1,16 +1,22 @@
 import { CardGrid } from '@/components/CardGrid/CardGrid';
 import { ContentCard } from '@/components/ContentCard/ContentCard';
+import { TabType } from '@/components/TabsComponent/TabsComponent';
 import { gemsSchema } from '@/schemas/gemSchema';
 import EssencesData from '../../data/essences.json';
 import MemoriesData from '../../data/memories.json';
 
 
-const EssencesPage = ({tabData}) => {
-  const dataMapping = {
+interface ContentPageProps {
+  activeTab: TabType
+}
+
+const ContentPage = ({activeTab}: ContentPageProps) => {
+  const dataMapping: Record<TabType, Record<string, unknown>> = {
     Essences: EssencesData,
-    Memories: MemoriesData
-  }
-  const jsonToLoad = tabData === 'Essences' ? dataMapping.Essences : dataMapping.Memories
+    Memories: MemoriesData,
+  };
+
+  const jsonToLoad = dataMapping[activeTab]
 
   try {
     gemsSchema.parse(jsonToLoad);
@@ -18,10 +24,10 @@ const EssencesPage = ({tabData}) => {
     console.error(e);
   }
   
-  const data = Object.entries(jsonToLoad);
+  const data = jsonToLoad ?? typeof(jsonToLoad) === 'object' ? Object.entries(jsonToLoad) : [];
 
   const mappedData = data.map(([key, value]) => <ContentCard key={key} data={value} />);
   return <CardGrid cardData={mappedData} />;
 };
 
-export default EssencesPage;
+export default ContentPage;

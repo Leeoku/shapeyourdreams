@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Center, Text, Title } from '@mantine/core';
-import EssencesPage from './Content.page';
-import { TabsComponent, TabTypes } from '@/components/TabsComponent/TabsComponent';
+import ContentPage from './Content.page';
+import { TabsComponent, TabType } from '@/components/TabsComponent/TabsComponent';
 
 
 export function HomePage() {
-  const [activeTab, setActiveTab] = useState<TabTypes>('Essences');
+  const [activeTab, setActiveTab] = useState<TabType>('Essences');
 
   return (
     <>
@@ -15,7 +15,8 @@ export function HomePage() {
         </Title>
       </Center>
       <TabsComponent activeTab={activeTab} setActiveTab={setActiveTab}/>
-      {activeTab === "Essences" ? <EssencesPage tabData="Essences"/> : <EssencesPage tabData="Memories"/>}
+      {/* {activeTab === "Essences" ? <ContentPage tabData="Essences"/> : <ContentPage tabData="Memories"/>} */}
+      <ContentPage activeTab={activeTab}/>
     </>
   );
 }

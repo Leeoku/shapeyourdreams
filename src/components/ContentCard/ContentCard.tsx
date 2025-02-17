@@ -24,7 +24,6 @@ export const ContentCard = ({ data }) => {
           <Text fw={700}>{name}</Text>
           <Text>{rarity}</Text>
         </Group>
-        {/* <Text>{description}</Text> */}
         <StyledDescription description={description} />
       </Card>
     </Box>
