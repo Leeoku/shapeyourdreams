@@ -3,7 +3,16 @@ import { StyledDescription } from '@/components/StyledDescription/StyledDescript
 
 // @ts-ignore
 export const ContentCard = ({ data }) => {
-  const { name, description, rarity, image } = data;
+  const { name, description, rarity, image, cooldownTime, maxCharges, type, traveler, tags } = data;
+
+  function trimTravelerText(text: string) {
+    return text.replace('Hero_', '');
+  }
+
+  function renderTags(tags: string[]) {
+    if(tags.length === 0) {return "None"}
+    return tags.join(', ');
+  }
 
   return (
     <Box maw={400}>
@@ -16,9 +25,20 @@ export const ContentCard = ({ data }) => {
           </Center>
         </CardSection>
         <Group justify="space-between">
-          <Text fw={700}>{name}</Text>
-          <Text>{rarity}</Text>
+          <Text size="lg" fw={700}>
+            {name}
+          </Text>
+          <Group>
+            {traveler ? <Text>{trimTravelerText(traveler)}</Text> : null}
+            <Text>{rarity}</Text>
+          </Group>
         </Group>
+        <Box>
+          {cooldownTime ? <Text>Cooldown: {cooldownTime} seconds</Text> : null}
+          {type ? <Text>Type: {type}</Text> : null}
+          {maxCharges !== 1 ? <Text>Charges: {maxCharges}</Text> : null}
+          {tags ? <Text>Tags: {renderTags(tags)}</Text> : null}
+        </Box>
         <StyledDescription description={description} />
       </Card>
     </Box>

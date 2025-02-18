@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Center, Text, Title } from '@mantine/core';
+import { Center, Title } from '@mantine/core';
 import ContentPage from './Content.page';
 import { TabsComponent, TabType } from '@/components/TabsComponent/TabsComponent';
 
@@ -15,7 +15,6 @@ export function HomePage() {
         </Title>
       </Center>
       <TabsComponent activeTab={activeTab} setActiveTab={setActiveTab}/>
-      {/* {activeTab === "Essences" ? <ContentPage tabData="Essences"/> : <ContentPage tabData="Memories"/>} */}
       <ContentPage activeTab={activeTab}/>
     </>
   );
