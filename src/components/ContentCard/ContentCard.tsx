@@ -36,7 +36,7 @@ export const ContentCard = ({ data }) => {
         <Box>
           {cooldownTime ? <Text>Cooldown: {cooldownTime} seconds</Text> : null}
           {type ? <Text>Type: {type}</Text> : null}
-          {maxCharges !== 1 ? <Text>Charges: {maxCharges}</Text> : null}
+          {(maxCharges && maxCharges !== 1)? <Text>Charges: {maxCharges}</Text> : null}
           {tags ? <Text>Tags: {renderTags(tags)}</Text> : null}
         </Box>
         <StyledDescription description={description} />

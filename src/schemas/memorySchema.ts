@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const memorySchema = z.object({
+export const memorySchema = z.object({
   name: z.string(),
   cooldownTime: z.number(),
   maxCharges: z.number(),
