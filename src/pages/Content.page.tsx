@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { Space } from '@mantine/core';
 import { CardGrid } from '@/components/CardGrid/CardGrid';
 import { ContentCard } from '@/components/ContentCard/ContentCard';
-import { Filter } from '@/components/Filter/Filter';
+// import { Filter } from '@/components/Filter/Filter';
 import { ContentTabType } from '@/components/TabsComponent/TabsComponent';
 // import { gemsSchema, gemsFilterSchema, gemsFilterType } from '@/schemas/gemSchema';
 import { gemsSchema } from '@/schemas/gemSchema';
