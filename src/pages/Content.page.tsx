@@ -40,7 +40,7 @@ const ContentPage = ({ activeTab }: ContentPageProps) => {
   const mappedData = data.map(([key, value]) => <ContentCard key={key} data={value} />);
   return (
     <Space>
-      <Filter />
+      {/* <Filter /> */}
       <CardGrid cardData={mappedData} />
     </Space>
   );
