@@ -2,7 +2,7 @@ import '@mantine/core/styles.css';
 import { Tabs } from '@mantine/core';
 import styles from './TabsComponent.module.css';
 
-export type TabType = 'Essences' | 'Memories'
+export type TabType = 'Essences' | 'Memories' | 'Mechanics' | 'Changelog'
 
 interface TabsComponentProps {
   activeTab: TabType;
@@ -26,6 +26,20 @@ export const TabsComponent = ({activeTab, setActiveTab}: TabsComponentProps) => 
           onClick={() => setActiveTab('Memories')}
         >
           Memories
+        </Tabs.Tab>
+        {/* <Tabs.Tab
+          value="Mechanics"
+          className={styles.customTab}
+          onClick={() => setActiveTab('Mechanics')}
+        >
+          Mechanics
+        </Tabs.Tab> */}
+        <Tabs.Tab
+          value="Changelog"
+          className={styles.customTab}
+          onClick={() => setActiveTab('Changelog')}
+        >
+          Changelog
         </Tabs.Tab>
       </Tabs.List>
     </Tabs>
