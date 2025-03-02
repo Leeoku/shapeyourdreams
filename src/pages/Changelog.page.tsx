@@ -20,7 +20,7 @@ export const ChangelogPage = () => {
                   <div key={title}>
                     <h3>{title}</h3>
                     <List>
-                      {change.map((bullet) => (
+                      {change.map((bullet:any) => (
                         <List.Item key={bullet}>{bullet}</List.Item>
                       ))}
                     </List>

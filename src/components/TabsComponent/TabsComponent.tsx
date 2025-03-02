@@ -3,6 +3,7 @@ import { Tabs } from '@mantine/core';
 import styles from './TabsComponent.module.css';
 
 export type TabType = 'Essences' | 'Memories' | 'Mechanics' | 'Changelog'
+export type ContentTabType = Extract<TabType, 'Essences' | 'Memories'>
 
 interface TabsComponentProps {
   activeTab: TabType;
