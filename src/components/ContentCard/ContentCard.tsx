@@ -1,4 +1,4 @@
-import { Box, Card, CardSection, Center, Group, Image, Text } from '@mantine/core';
+import { Badge, Box, Card, CardSection, Center, Group, Image, Text } from '@mantine/core';
 import { StyledDescription } from '@/components/StyledDescription/StyledDescription';
 
 // @ts-ignore
@@ -14,6 +14,18 @@ export const ContentCard = ({ data }) => {
     return tags.join(', ');
   }
 
+  const gemRarityColorMapping = {
+    'Common': 'grey',
+    'Rare': 'cyan',
+    'Epic': 'purple', 
+    'Legendary': 'red'
+  } as const
+
+  type Rarity = keyof typeof gemRarityColorMapping
+  const rarityValue:Rarity = rarity
+
+  const rarityColor = gemRarityColorMapping[rarityValue] || "yellow"
+  
   return (
     <Box maw={400}>
       <Card>
@@ -29,8 +41,8 @@ export const ContentCard = ({ data }) => {
             {name}
           </Text>
           <Group>
-            {traveler ? <Text>{trimTravelerText(traveler)}</Text> : null}
-            <Text>{rarity}</Text>
+            {traveler ? <Badge color="violet">{trimTravelerText(traveler)}</Badge> : null}
+            <Badge color={rarityColor}>{rarity}</Badge>
           </Group>
         </Group>
         <Box>
