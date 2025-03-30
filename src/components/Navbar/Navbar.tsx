@@ -1,4 +1,4 @@
-import { Box, Flex, Group, Stack, Title } from '@mantine/core';
+import { Box, Flex, Group, Title } from '@mantine/core';
 
 
 export const Navbar = () => {
