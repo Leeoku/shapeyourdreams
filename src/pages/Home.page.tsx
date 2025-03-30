@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Center, Title } from '@mantine/core';
+import { Navbar } from '@/components/Navbar/Navbar';
 import ContentPage from './Content.page';
 import { ChangelogPage } from './Changelog.page';
 import { TabsComponent, TabType } from '@/components/TabsComponent/TabsComponent';
@@ -10,11 +10,7 @@ export function HomePage() {
 
   return (
     <>
-      <Center>
-        <Title order={1} mb="xl" mt="xl">
-          Shape Your Dreams
-        </Title>
-      </Center>
+      <Navbar/>
       <TabsComponent activeTab={activeTab} setActiveTab={setActiveTab}/>
       {(activeTab === 'Essences' || activeTab === 'Memories') ? <ContentPage activeTab={activeTab}/> : null}
       {activeTab === 'Changelog' ? <ChangelogPage/> : null}
