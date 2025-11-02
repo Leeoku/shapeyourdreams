@@ -23,8 +23,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@mantine/core": "7.16.1",
-    "@mantine/hooks": "7.16.1",
+    "@mantine/core": "8.3.6",
+    "@mantine/hooks": "8.3.6",
     "netlify-cli": "^18.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -53,7 +53,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jsdom": "^26.0.0",
     "postcss": "^8.5.1",
-    "postcss-preset-mantine": "1.17.0",
+    "postcss-preset-mantine": "1.18.0",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.4.2",
     "prop-types": "^15.8.1",
