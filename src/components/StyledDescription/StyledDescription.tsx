@@ -13,9 +13,9 @@ const replaceColorTags = (text:any) => {
 const replaceSpriteWithImage = (text:any) => {
   // Define a mapping for sprite numbers to image URLs
   const spriteImages = {
-    1: `/images/sprite1.png`, // Replace with actual image URLs
-    2: `/images/sprite2.png`,
-    5: `/images/sprite5.png`,
+    1: `/sprites/sprite1.png`, // Replace with actual image URLs
+    2: `/sprites/sprite2.png`,
+    5: `/sprites/sprite5.png`,
   };
 
   // Regex to match <sprite={num}> and replace with corresponding <img> tag
