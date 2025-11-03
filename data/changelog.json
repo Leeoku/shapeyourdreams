@@ -2,82 +2,33 @@
   "changelog": [
     {
       "version": "Patch 1.09 Update",
-      "date": "2025-09-16",
-      "changes": [
-      ],
+      "date": "2025-10-16",
+      "changes": [],
       "link": "https://store.steampowered.com/news/app/2444750/view/567015514185924835?l=english"
     },
     {
-      "version": "SteamFest Update",
-      "date": "2025-02-23",
-      "changes": [
-        {
-          "Balance Changes": [
-            "Mental Corruption's initial damage -20%, DoT +20%, cooldown increased by 1 second",
-            "Multiple Mental Corruptions can now stack on a single target.",
-            "Effect disappears if the target becomes an ally.",
-            "Essence of Wound's explosion is now AoE damage, hitting all nearby enemies.",
-            "Pressure Point's wall collision damage +30%",
-            "Ice Claw's second hit damage +20%",
-            "Anti-Gravity damage +15%",
-            "Essence of Talc's bonus damage +20%",
-            "Essence of Shatter's Light damage amplification +20%",
-            "Reduced difficulty in Hunter ambush areas"
-          ],
-          "Other Changes": [
-            "You can now rotate characters in the lobby.",
-            "Essence of Predation now displays the total amount of AP and AD gained.",
-            "Damage numbers are now consistently colored: orange for Attack Damage (AD) and blue for Ability Power (AP).",
-            "A small gift for the community - The game's 'RawData' folder now includes up-to-date game data json and images for all Essences and Memories. Thanks to our passionate community developers who suggested this."
-          ]
-        }
-      ]
+      "version": "Hotfix 1.08 Update",
+      "date": "2025-10-03",
+      "changes": [],
+      "link": "https://store.steampowered.com/news/app/2444750/view/519725729918748091?l=english"
     },
     {
-      "version": "Late Game Gameplay Update",
-      "date": "2025-01-16",
-      "changes": [
-        {
-          "Monster Scaling Rework": [
-            "Heroic Bosses and Mini-bosses now have a steeper HP scaling curve in the late game.",
-            "All enemies now have a slightly gentler damage scaling curve in the late game."
-          ],
-
-          "Traveler Scaling Rework": [
-            "Reduced base stats for all Travelers while increasing their growth stats based on their characteristics.",
-            "Melee Travelers now receive increased HP scaling and base defense."
-          ],
-          "Mirage Skin Rework": [
-            "Mirage Skin debuff's healing reduction effect has been changed from 100% -> 90%.",
-            "Melee Travelers now receive this debuff progressively at 30% -> 60% -> 90% with each hit.",
-            "Added the ability to rename public lobbies",
-            "Memory and Essence chat pings now show related information when hovering over them."
-          ]
-        },
-        {
-          "Balance Changes": [
-            "Slightly increased Vesper's base HP",
-            "Slightly reduced HP increase and healing amount of Vesper's first passive Memory",
-            "Increased healing amount of Vesper's second passive Memory",
-            "Slightly increased invulnerability duration of Winter Fall Memory, enemies now ignore players casting Winter Fall",
-            "Reduced damage upgrade scaling of Mist's Parry Memory",
-            "Buffed damage of Talc Essence, Sharpness Essence, and Essence of Bleak",
-            "Changed Blade Essence to scale with AD",
-            "Changed Celestial Essence cooldown from 5 -> 10 seconds, projectiles from 3 -> 4, and increased damage",
-            "Changed Aurena's passive Memory scaling from AP -> AD",
-            "Changed Arrow Rain Memory trigger condition from Basic Attack -> Attack"
-          ],
-
-          "Other Changes": [
-            "Travelers affected by Dark Impulse curse can now be attacked by allies",
-            "Frost Essence and Blade Essence now affected by Flow Essence's cooldown reduction",
-            "Game preparation screen now remembers previously selected Lucid Dream",
-            "Improved various overly intense lighting effects",
-            "Reduced Hunter Ambush Orb health",
-            "Significantly reduced initial loading time and VRAM usage"
-          ]
-        }
-      ]
+      "version": "Patch 1.07 Update",
+      "date": "2025-09-29",
+      "changes": [],
+      "link": "https://store.steampowered.com/news/app/2444750/view/519725729918747801?l=english"
+    },
+    {
+      "version": "Hotfix 1.06 Update",
+      "date": "2025-09-18",
+      "changes": [],
+      "link": "https://store.steampowered.com/news/app/2444750/view/519725096071332314?l=english"
+    },
+    {
+      "version": "Patch 1.05 Update",
+      "date": "2025-09-17",
+      "changes": [],
+      "link": "https://store.steampowered.com/news/app/2444750/view/519725096071331912?l=english"
     }
   ]
 }
